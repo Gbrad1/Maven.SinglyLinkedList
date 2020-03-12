@@ -34,7 +34,7 @@ public class Node<T> {
     }
 
     public void setNext(Node<T> newNext) {
-        this.next = next;
+        this.next = newNext;
 
     }
 }

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4f0c6f35-1ac5-49ea-b41e-20445c07c5c6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedListTest.java" afterDir="false" />
     </list>
@@ -47,7 +48,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.SinglyLinkedListTest.testConstructor">
+  <component name="RunManager" selected="JUnit.SinglyLinkedListTest">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -118,7 +119,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.testAddition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.removeLastIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -128,7 +129,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="testAddition" />
+      <option name="METHOD_NAME" value="removeLastIndex" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -152,7 +153,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.testConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.testRemovingAValueByIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -162,14 +163,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="testConstructor" />
+      <option name="METHOD_NAME" value="testRemovingAValueByIndex" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.testRemovingAvalueByIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.testRemovingTheLastIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -179,7 +180,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="testRemovingAvalueByIndex" />
+      <option name="METHOD_NAME" value="testRemovingTheLastIndex" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -247,11 +248,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SinglyLinkedListTest.testConstructor" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.testAddition" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.testAdditionBy2" />
         <item itemvalue="JUnit.SinglyLinkedListTest" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.testRemovingAvalueByIndex" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.testRemovingTheLastIndex" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.removeLastIndex" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.testRemovingAValueByIndex" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.testAdditionBy2" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +271,7 @@
       <workItem from="1583864270930" duration="23000" />
       <workItem from="1583865381501" duration="213000" />
       <workItem from="1583954728981" duration="181000" />
-      <workItem from="1583957722079" duration="4665000" />
+      <workItem from="1583957722079" duration="16841000" />
     </task>
     <servers />
   </component>
@@ -286,25 +287,25 @@
       <screen x="-280" y="-1080" width="1920" height="1080" />
     </state>
     <state x="493" y="-817" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584034447590" />
-    <state width="1878" height="243" key="GridCell.Tab.0.bottom" timestamp="1584040164660">
+    <state width="1878" height="241" key="GridCell.Tab.0.bottom" timestamp="1584057037897">
       <screen x="-280" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1878" height="243" key="GridCell.Tab.0.bottom/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584040164660" />
+    <state width="1878" height="241" key="GridCell.Tab.0.bottom/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584057037897" />
     <state width="1878" height="248" key="GridCell.Tab.0.bottom/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583804347664" />
-    <state width="1878" height="243" key="GridCell.Tab.0.center" timestamp="1584040164657">
+    <state width="1878" height="241" key="GridCell.Tab.0.center" timestamp="1584057037895">
       <screen x="-280" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1878" height="243" key="GridCell.Tab.0.center/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584040164657" />
+    <state width="1878" height="241" key="GridCell.Tab.0.center/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584057037895" />
     <state width="1878" height="248" key="GridCell.Tab.0.center/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583804347662" />
-    <state width="1878" height="243" key="GridCell.Tab.0.left" timestamp="1584040164655">
+    <state width="1878" height="241" key="GridCell.Tab.0.left" timestamp="1584057037894">
       <screen x="-280" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1878" height="243" key="GridCell.Tab.0.left/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584040164655" />
+    <state width="1878" height="241" key="GridCell.Tab.0.left/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584057037894" />
     <state width="1878" height="248" key="GridCell.Tab.0.left/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583804347660" />
-    <state width="1878" height="243" key="GridCell.Tab.0.right" timestamp="1584040164659">
+    <state width="1878" height="241" key="GridCell.Tab.0.right" timestamp="1584057037896">
       <screen x="-280" y="-1080" width="1920" height="1080" />
     </state>
-    <state width="1878" height="243" key="GridCell.Tab.0.right/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584040164659" />
+    <state width="1878" height="241" key="GridCell.Tab.0.right/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584057037896" />
     <state width="1878" height="248" key="GridCell.Tab.0.right/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583804347663" />
     <state width="1878" height="374" key="GridCell.Tab.1.bottom" timestamp="1583806672288">
       <screen x="-280" y="-1080" width="1920" height="1080" />

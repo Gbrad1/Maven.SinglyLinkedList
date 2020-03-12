@@ -31,23 +31,37 @@ public class SinglyLinkedList<T> {
         }
     }
 
-    public void remove(Integer index) {
+    public void remove(Integer toRemove) {
 
-        Node<T> currentHead = head;
-        Node<T> originalHead = head;
+        Node<T> currentNode = head;
+        Node<T> nextNode = null;
+        Node<T> buffer = null;
+        int lastIndex = (getSize(head)-1);
 
-        for (int i = 0; i < index; i++) {
-            //currentHead = currentHead.getNext();
-            if (i == index - 1) {
-                currentHead = currentHead.getNext();
+        if (toRemove == 0) {
+            head = currentNode.getNext();
+        } else if (toRemove == lastIndex) {
+            for (int i = 0; i < lastIndex - 1; i++) {
+                head = currentNode.getNext();
+            }
+            tail = currentNode;
+        } else {
+            for (int i = 0; i < toRemove; i++) {
+                if (i == toRemove - 1) {
+                    buffer = currentNode.getNext();
+                    nextNode = buffer.getNext();
+                    currentNode.setNext(nextNode);
+                }
             }
         }
-
-        originalHead.setNext(currentHead);
     }
 
-    public int getSize(Node<T> currentHead) {
-        int count = 0;
+    public boolean isIndexLast() {
+        return tail == null;
+    }
+
+    public Integer getSize(Node<T> currentHead) {
+        Integer count = 0;
         Node<T> link = currentHead;
         while (link != null) {
             link = link.getNext();
@@ -63,7 +77,7 @@ public class SinglyLinkedList<T> {
     public Node<T> getTail() {
         return tail;
     }
-    
+
     public boolean isEmpty() {
         return(head == null);
     }

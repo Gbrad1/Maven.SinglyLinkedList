@@ -4,12 +4,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import javax.xml.soap.Node;
+import java.util.logging.Logger;
 
 /**
  * Created by leon on 1/10/18.
  */
 public class SinglyLinkedListTest {
-
+    private static final Logger LOGGER = Logger.getLogger(SinglyLinkedList.class.getName());
 
     @Test
     public void testConstructor() {
@@ -36,16 +37,18 @@ public class SinglyLinkedListTest {
 
     @Test
     public void testAdditionBy2() {
-        String stringTest = "YOY";
-        String stringTestAgain = "YoY";
-        String andAnother = "yeet";
+        String string1 = "YOY";
+        String string2 = "YoY";
+        String string3 = "yeet";
+        String string4 = "yaYeet";
         SinglyLinkedList<String> linkedList= new SinglyLinkedList();
-        linkedList.add(stringTest);
-        linkedList.add(stringTestAgain);
-        linkedList.add(andAnother);
+        linkedList.add(string1);
+        linkedList.add(string2);
+        linkedList.add(string3);
+        linkedList.add(string4);
 
         int actualSize = linkedList.getSize(linkedList.getHead());
-        int expectedSize = 3;
+        int expectedSize = 4;
 
         Assert.assertEquals(expectedSize, actualSize);
     }
@@ -64,22 +67,84 @@ public class SinglyLinkedListTest {
     public void testRemovingAValueByIndex() {
         SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
 
-        String emily = ("Emily");
-        String moran = ("Moran");
-        String emma = "Emma";
-        linkedList.add(emily);
-        linkedList.add(moran);
-        linkedList.add(emma);
-
-        int actualSizeBeforeRemoveal = linkedList.getSize(linkedList.getHead());
-        int expectedSizeBeforeRemove = 3;
+        String string1 = "apple";
+        String string2 = "orange";
+        String string3 = "pear";
+        String string4 = "banana";
+        linkedList.add(string1);
+        linkedList.add(string2);
+        linkedList.add(string3);
+        linkedList.add(string4);
 
         linkedList.remove(2);
 
         int actualSize = linkedList.getSize(linkedList.getHead());
-        int expectedSize = 2;
+        int expectedSize = 3;
 
-        Assert.assertEquals(expectedSizeBeforeRemove, actualSizeBeforeRemoveal);
+        //Assert.assertEquals(expectedSizeBeforeRemove, actualSizeBeforeRemoval);
+        Assert.assertEquals(expectedSize, actualSize);
+    }
+
+    @Test
+    public void removeLastIndex() {
+        SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
+        String string1 = "apple";
+        String string2 = "orange";
+        String string3 = "pear";
+        String string4 = "banana";
+        linkedList.add(string1);
+        linkedList.add(string2);
+        linkedList.add(string3);
+        linkedList.add(string4);
+
+        linkedList.remove(3);
+
+        int actualSize = linkedList.getSize(linkedList.getHead());
+        int expectedSize = 3;
+
+        LOGGER.info("\n" + linkedList.getHead());
+        Assert.assertEquals(expectedSize, actualSize);
+    }
+
+    @Test
+    public void testRemovingTheFirstIndex() {
+        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
+
+        String string1 = "apple";
+        String string2 = "orange";
+        String string3 = "pear";
+        String string4 = "banana";
+        linkedList.add(string1);
+        linkedList.add(string2);
+        linkedList.add(string3);
+        linkedList.add(string4);
+
+        linkedList.remove(1);
+
+        int actualSize = linkedList.getSize(linkedList.getHead());
+        int expectedSize = 3;
+
+        Assert.assertEquals(expectedSize, actualSize);
+    }
+
+    @Test
+    public void testRemovingTheLastIndex() {
+        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
+
+        String string1 = "apple";
+        String string2 = "orange";
+        String string3 = "pear";
+        String string4 = "banana";
+        linkedList.add(string1);
+        linkedList.add(string2);
+        linkedList.add(string3);
+        linkedList.add(string4);
+
+        linkedList.remove(4);
+
+        int actualSize = linkedList.getSize(linkedList.getHead());
+        int expectedSize = 3;
+
         Assert.assertEquals(expectedSize, actualSize);
     }
 
