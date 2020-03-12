@@ -14,9 +14,8 @@ public class SinglyLinkedList<T> {
 
     private Node<T> head;
     private Node<T> tail;
-    private int length = 0;
 
-    public void SinglyLinkedList() {
+    public SinglyLinkedList() {
         this.head = null;
         this.tail = null;
     }
@@ -30,7 +29,6 @@ public class SinglyLinkedList<T> {
             tail.setNext(nodster);
             tail = nodster;
         }
-        length++;
     }
 
     public void remove(Integer index) {
@@ -46,26 +44,28 @@ public class SinglyLinkedList<T> {
         }
 
         originalHead.setNext(currentHead);
-        length--;
     }
 
-    public Integer getSize() {
-        return length;
-    }
-
-    public String printList() {
-        String toReturn = "";
-        for (int i = 0; i < length; i++) {
-            toReturn += head.getNext();
-            LOGGER.info("\n" + head.getNext());
+    public int getSize(Node<T> currentHead) {
+        int count = 0;
+        Node<T> link = currentHead;
+        while (link != null) {
+            link = link.getNext();
+            count++;
         }
-        return toReturn;
+        return count;
     }
 
+    public Node<T> getHead() {
+        return head;
+    }
+
+    public Node<T> getTail() {
+        return tail;
+    }
+    
     public boolean isEmpty() {
         return(head == null);
     }
-
-    //Node class ----------------------------------------------------------
 
 }

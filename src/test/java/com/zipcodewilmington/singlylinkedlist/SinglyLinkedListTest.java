@@ -10,14 +10,42 @@ import javax.xml.soap.Node;
  */
 public class SinglyLinkedListTest {
 
+
+    @Test
+    public void testConstructor() {
+        SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
+        int actualSize = linkedList.getSize(linkedList.getHead());
+        int expectedSize = 0;
+
+        Assert.assertEquals(expectedSize, actualSize);
+        Assert.assertNull(linkedList.getHead());
+        Assert.assertNull(linkedList.getTail());
+    }
+
     @Test
     public void testAddition() {
         String stringTest = "YOY";
-        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
+        SinglyLinkedList<String> linkedList = new SinglyLinkedList();
         linkedList.add(stringTest);
 
-        int actualSize = linkedList.getSize();
+        int actualSize = linkedList.getSize(linkedList.getHead());
         int expectedSize = 1;
+
+        Assert.assertEquals(expectedSize, actualSize);
+    }
+
+    @Test
+    public void testAdditionBy2() {
+        String stringTest = "YOY";
+        String stringTestAgain = "YoY";
+        String andAnother = "yeet";
+        SinglyLinkedList<String> linkedList= new SinglyLinkedList();
+        linkedList.add(stringTest);
+        linkedList.add(stringTestAgain);
+        linkedList.add(andAnother);
+
+        int actualSize = linkedList.getSize(linkedList.getHead());
+        int expectedSize = 3;
 
         Assert.assertEquals(expectedSize, actualSize);
     }
@@ -26,14 +54,14 @@ public class SinglyLinkedListTest {
     public void testAdditionNullary() {
         SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
 
-        int actualSize = linkedList.getSize();
+        int actualSize = linkedList.getSize(linkedList.getHead());
         int expectedSize = 0;
 
         Assert.assertEquals(expectedSize, actualSize);
     }
 
     @Test
-    public void testRemovingAvalueByIndex() {
+    public void testRemovingAValueByIndex() {
         SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
 
         String emily = ("Emily");
@@ -43,15 +71,13 @@ public class SinglyLinkedListTest {
         linkedList.add(moran);
         linkedList.add(emma);
 
-        int actualSizeBeforeRemoveal = linkedList.getSize();
+        int actualSizeBeforeRemoveal = linkedList.getSize(linkedList.getHead());
         int expectedSizeBeforeRemove = 3;
 
         linkedList.remove(2);
 
-        int actualSize = linkedList.getSize();
+        int actualSize = linkedList.getSize(linkedList.getHead());
         int expectedSize = 2;
-
-        linkedList.printList();
 
         Assert.assertEquals(expectedSizeBeforeRemove, actualSizeBeforeRemoveal);
         Assert.assertEquals(expectedSize, actualSize);
