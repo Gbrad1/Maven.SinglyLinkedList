@@ -10,8 +10,6 @@ import java.util.logging.Logger;
  */
 public class SinglyLinkedList<T> {
 
-    private static final Logger LOGGER = Logger.getLogger(SinglyLinkedList.class.getName());
-
     private Node<T> head;
     private Node<T> tail;
 
@@ -32,10 +30,9 @@ public class SinglyLinkedList<T> {
     }
 
     public void remove(Integer toRemove) {
-
         Node<T> currentNode = head;
-        Node<T> nextNode = null;
-        Node<T> buffer = null;
+        Node<T> nextNode;
+        Node<T> buffer;
         int lastIndex = (getSize(head)-1);
 
         if (toRemove == 0) {
@@ -56,8 +53,31 @@ public class SinglyLinkedList<T> {
         }
     }
 
-    public boolean isIndexLast() {
-        return tail == null;
+    public boolean contains(T value) {
+        int count = 0;
+        Node<T> currentNode = head;
+        while (currentNode.getElement() != value) {
+            currentNode = currentNode.getNext();
+            count++;
+            if (count == getSize(head)) {
+                break;
+            }
+        }
+
+        if (count != getSize(head)) {
+            return true;
+        }
+        return false;
+    }
+
+    public int find(T value) {
+        int count = 0;
+        int indexFound = 0;
+        Node<T> currentNode = head;
+        for (int i = 0; i < getSize(head); i++) {
+            
+        }
+        return indexFound;
     }
 
     public Integer getSize(Node<T> currentHead) {
@@ -76,6 +96,22 @@ public class SinglyLinkedList<T> {
 
     public Node<T> getTail() {
         return tail;
+    }
+
+    public T getNodeAtIndex(int index) {
+        Node<T> currentNode = head;
+        T link = null;
+        if (index == (getSize(head) - 1)) {
+            link = tail.getElement();
+        } else if (index > 1) {
+            for (int i = 0; i < index - 1; i++) {
+                currentNode = currentNode.getNext();
+                link = currentNode.getElement();
+            }
+        } else {
+            link = currentNode.getElement();
+        }
+        return link;
     }
 
     public boolean isEmpty() {
