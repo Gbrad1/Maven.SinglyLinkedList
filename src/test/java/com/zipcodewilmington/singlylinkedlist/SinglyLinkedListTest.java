@@ -1,14 +1,50 @@
 package com.zipcodewilmington.singlylinkedlist;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
-import java.util.logging.Logger;
 
 /**
  * Created by leon on 1/10/18.
  */
 public class SinglyLinkedListTest {
-    private static final Logger LOGGER = Logger.getLogger(SinglyLinkedList.class.getName());
+
+    private SinglyLinkedList<String> linkedList;
+    private String string1;
+    private String string2;
+    private String string3;
+    private String string4;
+    private String string5;
+    private String string6;
+    private String string7;
+    private String string8;
+    private String string9;
+
+
+    @Before
+    public void setup(){
+        linkedList = new SinglyLinkedList<>();
+        string1 = "apple";
+        string2 = "orange";
+        string3 = "pear";
+        string4 = "banana";
+        string5 = "dragon fruit";
+        string6 = "strawberry";
+        string7 = "peach";
+        string8 = "watermelon";
+        string9 = "pineapple";
+
+        linkedList.add(string1);
+        linkedList.add(string2);
+        linkedList.add(string3);
+        linkedList.add(string4);
+        linkedList.add(string5);
+        linkedList.add(string6);
+        linkedList.add(string7);
+        linkedList.add(string8);
+        linkedList.add(string9);
+
+    }
 
     @Test
     public void testConstructor() {
@@ -63,164 +99,62 @@ public class SinglyLinkedListTest {
 
     @Test
     public void testRemovingAValueByIndex() {
-        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         linkedList.remove(2);
 
         int actualSize = linkedList.getSize();
-        int expectedSize = 3;
+        int expectedSize = 8;
 
-        //Assert.assertEquals(expectedSizeBeforeRemove, actualSizeBeforeRemoval);
         Assert.assertEquals(expectedSize, actualSize);
     }
 
     @Test
     public void removeLastIndex() {
-        SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
-        linkedList.remove(3);
+        linkedList.remove(9);
 
         int actualSize = linkedList.getSize();
-        int expectedSize = 3;
+        int expectedSize = 8;
 
-        LOGGER.info("\n" + linkedList.getHead());
         Assert.assertEquals(expectedSize, actualSize);
     }
 
     @Test
     public void testRemovingTheFirstIndex() {
-        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         linkedList.remove(1);
 
         int actualSize = linkedList.getSize();
-        int expectedSize = 3;
+        int expectedSize = 8;
 
         Assert.assertEquals(expectedSize, actualSize);
     }
 
     @Test
     public void testRemovingTheLastIndex() {
-        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         linkedList.remove(4);
 
         int actualSize = linkedList.getSize();
-        int expectedSize = 3;
+        int expectedSize = 8;
 
         Assert.assertEquals(expectedSize, actualSize);
     }
 
     @Test
     public void testGetElementAtIndex() {
-        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
-        int actualSize = linkedList.getSize();
-        int expectedSize = 4;
-
         Assert.assertEquals("orange", linkedList.getNodeAtIndex(2));
-        Assert.assertEquals(expectedSize, actualSize);
     }
 
     @Test
     public void testGetElementAtIndex2() {
-        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         Assert.assertEquals("apple", linkedList.getNodeAtIndex(1));
     }
 
     @Test
     public void testGetElementAtIndex3() {
-        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         Assert.assertEquals("banana", linkedList.getNodeAtIndex(4));
     }
 
     @Test
     public void testGetElementAtIndex4() {
-        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
 
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        String string5 = "dragon fruit";
-        String string6 = "strawberry";
-        String string7 = "peach";
-        String string8 = "watermelon";
-        String string9 = "pineapple";
-
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-        linkedList.add(string5);
-        linkedList.add(string6);
-        linkedList.add(string7);
-        linkedList.add(string8);
-        linkedList.add(string9);
 
         Assert.assertEquals("strawberry", linkedList.getNodeAtIndex(6));
     }
@@ -233,114 +167,37 @@ public class SinglyLinkedListTest {
 
     @Test
     public void testContains() {
-        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         Assert.assertTrue(linkedList.contains(string4));
     }
 
     @Test
     public void testContainsFirst() {
-        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         Assert.assertTrue(linkedList.contains(string1));
     }
 
     @Test
     public void testContainsFirst2() {
-        SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         Assert.assertFalse(linkedList.contains("broccoli"));
     }
 
     @Test
     public void testFind() {
-        SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         Assert.assertEquals(1, linkedList.find("apple"));
     }
 
     @Test
     public void testFind1() {
-        SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         Assert.assertEquals(3, linkedList.find("pear"));
 
     }
 
     @Test
     public void testFind2() {
-        SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         Assert.assertEquals(4, linkedList.find("banana"));
     }
 
     @Test
     public void testCopy() {
-        SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
-
-        String string1 = "apple";
-        String string2 = "orange";
-        String string3 = "pear";
-        String string4 = "banana";
-        linkedList.add(string1);
-        linkedList.add(string2);
-        linkedList.add(string3);
-        linkedList.add(string4);
-
         SinglyLinkedList<String> copy = linkedList.copy();
 
         Assert.assertEquals(linkedList.getNodeAtIndex(1), copy.getNodeAtIndex(1));
