@@ -33,7 +33,7 @@ public class SinglyLinkedList<T> {
         Node<T> currentNode = head;
         Node<T> nextNode;
         Node<T> buffer;
-        int lastIndex = (getSize(head)-1);
+        int lastIndex = getSize() - 1;
 
         if (toRemove == 0) {
             head = currentNode.getNext();
@@ -59,12 +59,12 @@ public class SinglyLinkedList<T> {
         while (currentNode.getElement() != value) {
             currentNode = currentNode.getNext();
             count++;
-            if (count == getSize(head)) {
+            if (count == getSize()) {
                 break;
             }
         }
 
-        if (count != getSize(head)) {
+        if (count != getSize()) {
             return true;
         }
         return false;
@@ -74,15 +74,19 @@ public class SinglyLinkedList<T> {
         int count = 0;
         int indexFound = 0;
         Node<T> currentNode = head;
-        for (int i = 0; i < getSize(head); i++) {
-            
+        for (int i = 0; i < getSize(); i++) {
+            count++;
+            if (currentNode.getElement() == value) {
+                indexFound = count;
+            }
+            currentNode = currentNode.getNext();
         }
         return indexFound;
     }
 
-    public Integer getSize(Node<T> currentHead) {
+    public Integer getSize() {
         Integer count = 0;
-        Node<T> link = currentHead;
+        Node<T> link = head;
         while (link != null) {
             link = link.getNext();
             count++;
@@ -101,7 +105,7 @@ public class SinglyLinkedList<T> {
     public T getNodeAtIndex(int index) {
         Node<T> currentNode = head;
         T link = null;
-        if (index == (getSize(head) - 1)) {
+        if (index == (getSize() - 1)) {
             link = tail.getElement();
         } else if (index > 1) {
             for (int i = 0; i < index - 1; i++) {
@@ -112,6 +116,16 @@ public class SinglyLinkedList<T> {
             link = currentNode.getElement();
         }
         return link;
+    }
+
+    public SinglyLinkedList<T> copy() {
+        SinglyLinkedList<T> copiedLinkedList = new SinglyLinkedList<>();
+        Node<T> currentHead = head;
+        while (currentHead != null) {
+            copiedLinkedList.add(currentHead.getElement());
+            currentHead = currentHead.getNext();
+        }
+        return copiedLinkedList;
     }
 
     public boolean isEmpty() {

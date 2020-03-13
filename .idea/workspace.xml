@@ -47,7 +47,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.SinglyLinkedListTest.testFind1">
+  <component name="RunManager" selected="JUnit.SinglyLinkedListTest">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -118,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.testContainsFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.testCopy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -128,7 +128,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="testContainsFirst" />
+      <option name="METHOD_NAME" value="testCopy" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -247,11 +247,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SinglyLinkedListTest" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.testCopy" />
         <item itemvalue="JUnit.SinglyLinkedListTest.testFind1" />
         <item itemvalue="JUnit.SinglyLinkedListTest.testFind" />
         <item itemvalue="JUnit.SinglyLinkedListTest.testFine" />
-        <item itemvalue="JUnit.SinglyLinkedListTest" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.testContainsFirst" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +270,7 @@
       <workItem from="1583864270930" duration="23000" />
       <workItem from="1583865381501" duration="213000" />
       <workItem from="1583954728981" duration="181000" />
-      <workItem from="1583957722079" duration="25524000" />
+      <workItem from="1583957722079" duration="29611000" />
     </task>
     <servers />
   </component>
@@ -286,45 +286,53 @@
       <screen x="-280" y="-1080" width="1920" height="1080" />
     </state>
     <state x="493" y="-817" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584034447590" />
-    <state width="1878" height="240" key="GridCell.Tab.0.bottom" timestamp="1584104742762">
-      <screen x="-280" y="-1080" width="1920" height="1080" />
+    <state width="1238" height="234" key="GridCell.Tab.0.bottom" timestamp="1584130043071">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1878" height="240" key="GridCell.Tab.0.bottom/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584104742762" />
+    <state width="1878" height="374" key="GridCell.Tab.0.bottom/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584110682593" />
+    <state width="1238" height="234" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1584130043071" />
     <state width="1878" height="248" key="GridCell.Tab.0.bottom/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583804347664" />
-    <state width="1878" height="240" key="GridCell.Tab.0.center" timestamp="1584104742760">
-      <screen x="-280" y="-1080" width="1920" height="1080" />
+    <state width="1238" height="234" key="GridCell.Tab.0.center" timestamp="1584130043069">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1878" height="240" key="GridCell.Tab.0.center/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584104742760" />
+    <state width="1878" height="374" key="GridCell.Tab.0.center/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584110682590" />
+    <state width="1238" height="234" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1584130043069" />
     <state width="1878" height="248" key="GridCell.Tab.0.center/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583804347662" />
-    <state width="1878" height="240" key="GridCell.Tab.0.left" timestamp="1584104742759">
-      <screen x="-280" y="-1080" width="1920" height="1080" />
+    <state width="1238" height="234" key="GridCell.Tab.0.left" timestamp="1584130043068">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1878" height="240" key="GridCell.Tab.0.left/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584104742759" />
+    <state width="1878" height="374" key="GridCell.Tab.0.left/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584110682586" />
+    <state width="1238" height="234" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1584130043068" />
     <state width="1878" height="248" key="GridCell.Tab.0.left/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583804347660" />
-    <state width="1878" height="240" key="GridCell.Tab.0.right" timestamp="1584104742761">
-      <screen x="-280" y="-1080" width="1920" height="1080" />
+    <state width="1238" height="234" key="GridCell.Tab.0.right" timestamp="1584130043070">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1878" height="240" key="GridCell.Tab.0.right/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584104742761" />
+    <state width="1878" height="374" key="GridCell.Tab.0.right/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584110682591" />
+    <state width="1238" height="234" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1584130043070" />
     <state width="1878" height="248" key="GridCell.Tab.0.right/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583804347663" />
-    <state width="1878" height="374" key="GridCell.Tab.1.bottom" timestamp="1583806672288">
-      <screen x="-280" y="-1080" width="1920" height="1080" />
+    <state width="1238" height="262" key="GridCell.Tab.1.bottom" timestamp="1584129796780">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1878" height="374" key="GridCell.Tab.1.bottom/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583806672288" />
+    <state width="1878" height="374" key="GridCell.Tab.1.bottom/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584110682599" />
+    <state width="1238" height="262" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1584129796780" />
     <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583803779410" />
-    <state width="1878" height="374" key="GridCell.Tab.1.center" timestamp="1583806672285">
-      <screen x="-280" y="-1080" width="1920" height="1080" />
+    <state width="1238" height="262" key="GridCell.Tab.1.center" timestamp="1584129796778">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1878" height="374" key="GridCell.Tab.1.center/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583806672285" />
+    <state width="1878" height="374" key="GridCell.Tab.1.center/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584110682596" />
+    <state width="1238" height="262" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1584129796778" />
     <state width="1878" height="375" key="GridCell.Tab.1.center/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583803779409" />
-    <state width="1878" height="374" key="GridCell.Tab.1.left" timestamp="1583806672284">
-      <screen x="-280" y="-1080" width="1920" height="1080" />
+    <state width="1238" height="262" key="GridCell.Tab.1.left" timestamp="1584129796777">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1878" height="374" key="GridCell.Tab.1.left/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583806672284" />
+    <state width="1878" height="374" key="GridCell.Tab.1.left/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584110682594" />
+    <state width="1238" height="262" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1584129796777" />
     <state width="1878" height="375" key="GridCell.Tab.1.left/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583803779408" />
-    <state width="1878" height="374" key="GridCell.Tab.1.right" timestamp="1583806672286">
-      <screen x="-280" y="-1080" width="1920" height="1080" />
+    <state width="1238" height="262" key="GridCell.Tab.1.right" timestamp="1584129796779">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1878" height="374" key="GridCell.Tab.1.right/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583806672286" />
+    <state width="1878" height="374" key="GridCell.Tab.1.right/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1584110682597" />
+    <state width="1238" height="262" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1584129796779" />
     <state width="1878" height="375" key="GridCell.Tab.1.right/0.23.1280.777/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583803779409" />
     <state x="168" y="-959" key="SettingsEditor" timestamp="1584014245527">
       <screen x="-280" y="-1080" width="1920" height="1080" />
@@ -339,6 +347,25 @@
       <screen x="-280" y="-1080" width="1920" height="1080" />
     </state>
     <state x="343" y="-841" width="672" height="678" key="search.everywhere.popup/0.0.1280.800/-280.-1080.1920.1080@-280.-1080.1920.1080" timestamp="1583803441739" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java</url>
+          <line>120</line>
+          <properties class="com.zipcodewilmington.singlylinkedlist.SinglyLinkedList" method="copy">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/singlylinkedlist$SinglyLinkedListTest.ic" NAME="SinglyLinkedListTest Coverage Results" MODIFIED="1583803701116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

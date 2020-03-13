@@ -13,7 +13,7 @@ public class SinglyLinkedListTest {
     @Test
     public void testConstructor() {
         SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
-        int actualSize = linkedList.getSize(linkedList.getHead());
+        int actualSize = linkedList.getSize();
         int expectedSize = 0;
 
         Assert.assertEquals(expectedSize, actualSize);
@@ -27,7 +27,7 @@ public class SinglyLinkedListTest {
         SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
         linkedList.add(stringTest);
 
-        int actualSize = linkedList.getSize(linkedList.getHead());
+        int actualSize = linkedList.getSize();
         int expectedSize = 1;
 
         Assert.assertEquals(expectedSize, actualSize);
@@ -45,7 +45,7 @@ public class SinglyLinkedListTest {
         linkedList.add(string3);
         linkedList.add(string4);
 
-        int actualSize = linkedList.getSize(linkedList.getHead());
+        int actualSize = linkedList.getSize();
         int expectedSize = 4;
 
         Assert.assertEquals(expectedSize, actualSize);
@@ -55,7 +55,7 @@ public class SinglyLinkedListTest {
     public void testAdditionNullary() {
         SinglyLinkedList<String> linkedList= new SinglyLinkedList<>();
 
-        int actualSize = linkedList.getSize(linkedList.getHead());
+        int actualSize = linkedList.getSize();
         int expectedSize = 0;
 
         Assert.assertEquals(expectedSize, actualSize);
@@ -76,7 +76,7 @@ public class SinglyLinkedListTest {
 
         linkedList.remove(2);
 
-        int actualSize = linkedList.getSize(linkedList.getHead());
+        int actualSize = linkedList.getSize();
         int expectedSize = 3;
 
         //Assert.assertEquals(expectedSizeBeforeRemove, actualSizeBeforeRemoval);
@@ -97,7 +97,7 @@ public class SinglyLinkedListTest {
 
         linkedList.remove(3);
 
-        int actualSize = linkedList.getSize(linkedList.getHead());
+        int actualSize = linkedList.getSize();
         int expectedSize = 3;
 
         LOGGER.info("\n" + linkedList.getHead());
@@ -119,7 +119,7 @@ public class SinglyLinkedListTest {
 
         linkedList.remove(1);
 
-        int actualSize = linkedList.getSize(linkedList.getHead());
+        int actualSize = linkedList.getSize();
         int expectedSize = 3;
 
         Assert.assertEquals(expectedSize, actualSize);
@@ -140,7 +140,7 @@ public class SinglyLinkedListTest {
 
         linkedList.remove(4);
 
-        int actualSize = linkedList.getSize(linkedList.getHead());
+        int actualSize = linkedList.getSize();
         int expectedSize = 3;
 
         Assert.assertEquals(expectedSize, actualSize);
@@ -159,7 +159,7 @@ public class SinglyLinkedListTest {
         linkedList.add(string3);
         linkedList.add(string4);
 
-        int actualSize = linkedList.getSize(linkedList.getHead());
+        int actualSize = linkedList.getSize();
         int expectedSize = 4;
 
         Assert.assertEquals("orange", linkedList.getNodeAtIndex(2));
@@ -293,7 +293,6 @@ public class SinglyLinkedListTest {
         linkedList.add(string4);
 
         Assert.assertEquals(1, linkedList.find("apple"));
-
     }
 
     @Test
@@ -313,4 +312,41 @@ public class SinglyLinkedListTest {
 
     }
 
+    @Test
+    public void testFind2() {
+        SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
+
+        String string1 = "apple";
+        String string2 = "orange";
+        String string3 = "pear";
+        String string4 = "banana";
+        linkedList.add(string1);
+        linkedList.add(string2);
+        linkedList.add(string3);
+        linkedList.add(string4);
+
+        Assert.assertEquals(4, linkedList.find("banana"));
+    }
+
+    @Test
+    public void testCopy() {
+        SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
+
+        String string1 = "apple";
+        String string2 = "orange";
+        String string3 = "pear";
+        String string4 = "banana";
+        linkedList.add(string1);
+        linkedList.add(string2);
+        linkedList.add(string3);
+        linkedList.add(string4);
+
+        SinglyLinkedList<String> copy = linkedList.copy();
+
+        Assert.assertEquals(linkedList.getNodeAtIndex(1), copy.getNodeAtIndex(1));
+        Assert.assertEquals(linkedList.getNodeAtIndex(2), copy.getNodeAtIndex(2));
+        Assert.assertEquals(linkedList.getNodeAtIndex(3), copy.getNodeAtIndex(3));
+        Assert.assertEquals(linkedList.getNodeAtIndex(0), copy.getNodeAtIndex(0));
+
+    }
 }
